@@ -1,0 +1,21 @@
+ {
+    "manifest_version": 2,
+    "name": "__MSG_extName__",
+    "version": "0.1",
+    "description": "__MSG_extDescription__",
+    "default_locale": "en",
+    "author": "Nicolas St-Laurent <stlaurent.nicolas@gmail.com>",
+    "page_action": {
+      "default_icon": {
+        "16": "images/acim16.png",
+        "48": "images/acim48.png",
+        "128": "images/acim128.png"
+      }
+    },
+    "icons": {
+        "16": "images/acim16.png",
+        "48": "images/acim48.png",
+        "128": "images/acim128.png"
+    },
+    "manifest_version": 2
+  }

@@ -1,10 +1,10 @@
 {
   "name": "acim",
-  "version": "1.0.0",
+  "version": "0.2.0",
   "description": "A Course in Miracles extension",
   "main": "index.js",
   "scripts": {
-    "test": " \"tape ./test/*.test.js\""
+    "test": "tape ./test/*.test.js"
   },
   "repository": {
     "type": "git",

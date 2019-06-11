@@ -1,0 +1,25 @@
+{
+  "name": "acim",
+  "version": "1.0.0",
+  "description": "A Course in Miracles extension",
+  "main": "index.js",
+  "scripts": {
+    "test": " \"tape ./test/*.test.js\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nist/ACIM.git"
+  },
+  "keywords": [
+    "ACIM",
+    "Chrome",
+    "Firefox",
+    "extension"
+  ],
+  "author": "Nicolas St-Laurent",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nist/ACIM/issues"
+  },
+  "homepage": "https://github.com/nist/ACIM#readme"
+}

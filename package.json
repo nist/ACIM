@@ -10,6 +10,13 @@
     "type": "git",
     "url": "git+https://github.com/nist/ACIM.git"
   },
+  "devDependencies": {
+    "nyc": "^14.1.1",
+    "standard": "*",
+    "tape": "^4.10.1",
+    "webpack": "^4.20.2",
+    "webpack-cli": "^3.3.4"
+  },
   "keywords": [
     "ACIM",
     "Chrome",

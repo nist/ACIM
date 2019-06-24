@@ -1,18 +1,37 @@
 require "rake/testtask"
+$:.unshift File.join(File.dirname(__FILE__), "lib")
+require 'language'
 
 task :default => [:help]
 
-desc 'Prints help'
+desc 'Print help'
 task :help do
   puts 'This tool extract lessons from ACIM website.'
 end
 
 desc 'Extract lessons for specified language (two letter code)'
-task :extract_lessons do
+task :extract_lessons, :language_code do |_t, args|
+  if !args.language_code
+    puts "Specify a language code in #{Language::SUPPORTED_LANGUAGES}"
+    exit
+  end
+
+  language = args.language_code.to_s
+  if not Language.is_valid?(language)
+    puts "Language code #{language} is invalid. Supported languages : #{Language::SUPPORTED_LANGUAGES}"
+    exit
+  end
+
+  puts "Extract lessons for '#{language}'"
+  puts "done."
 end
 
 desc 'Extract lessons for all languages'
 task :extract_all_lessons do
+  Language::SUPPORTED_LANGUAGES.each do |language|
+    puts "Extract lessons for #{language}"
+  end
+  puts "All languages extracted."
 end
 
 desc 'Run all tests'

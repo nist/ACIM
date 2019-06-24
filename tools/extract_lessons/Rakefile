@@ -1,0 +1,23 @@
+require "rake/testtask"
+
+task :default => [:help]
+
+desc 'Prints help'
+task :help do
+  puts 'This tool extract lessons from ACIM website.'
+end
+
+desc 'Extract lessons for specified language (two letter code)'
+task :extract_lessons do
+end
+
+desc 'Extract lessons for all languages'
+task :extract_all_lessons do
+end
+
+desc 'Run all tests'
+Rake::TestTask.new do |test|
+  test.libs << "test"
+  test.test_files = Dir[ "test/test_*.rb" ]
+  test.verbose = true
+end

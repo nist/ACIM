@@ -1,6 +1,5 @@
 require 'test/unit'
-$:.unshift File.join(File.dirname(__FILE__), "..", "lib")
-require 'language'
+require_relative '../lib/language'
 
 class LanguageTest < Test::Unit::TestCase
   def test_valid_language

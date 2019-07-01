@@ -1,6 +1,5 @@
 require "rake/testtask"
-$:.unshift File.join(File.dirname(__FILE__), "lib")
-require 'language'
+require_relative 'lib/config'
 
 task :default => [:help]
 
@@ -11,13 +10,15 @@ end
 
 desc 'Extract lessons for specified language (two letter code)'
 task :extract_lessons, :language_code do |_t, args|
+  config = Config.new
   if !args.language_code
-    puts "Specify a language code in #{Language::SUPPORTED_LANGUAGES}"
+
+    puts "Specify a language code in #{config.languages}"
     exit
   end
 
   language = args.language_code.to_s
-  if not Language.is_valid?(language)
+  if not config.language_valid?(language)
     puts "Language code #{language} is invalid. Supported languages : #{Language::SUPPORTED_LANGUAGES}"
     exit
   end
@@ -28,7 +29,8 @@ end
 
 desc 'Extract lessons for all languages'
 task :extract_all_lessons do
-  Language::SUPPORTED_LANGUAGES.each do |language|
+  config = Config.new
+  config.languages.each do |language|
     puts "Extract lessons for #{language}"
   end
   puts "All languages extracted."

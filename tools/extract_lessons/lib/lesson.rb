@@ -5,9 +5,9 @@ require 'json'
 class Lesson
   PATH=File.expand_path('lessons')
   PAGE=""
-  @lessons
-  @url
-  @language
+  @lessons = {}
+  @url = ""
+  @language  = ""
 
   def initialize(url, language)
     @lessons = {}

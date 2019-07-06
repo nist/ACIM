@@ -1,36 +1,36 @@
 require 'json'
 
 class ConfigExtract
-  CONFIG_FILE=File.expand_path('config.json')
-  @config
+  @config_extract = {}
 
-  def initialize(filename = CONFIG_FILE)
+  def initialize
+    filename = File.expand_path('config.json')
     begin
       config_file = File.new(filename, "r")
-      @config = JSON.load(config_file)
+      @config_extract = JSON.load(config_file)
     rescue
       puts "Unable to read config file : #{filename}"
-      @config = {}
+      @config_extract = {}
     end
   end
 
   def config
-    @config
+    @config_extract
   end
 
   def languages
-    @config.keys
+    @config_extract.keys
   end
 
   def urls
-    @config.values
+    @config_extract.values
   end
 
   def url(language)
-    @config[language]
+    @config_extract[language]
   end
 
   def language_valid?(language)
-    not @config[language].nil?
+    not @config_extract[language].nil?
   end
 end

@@ -9,10 +9,10 @@ class ConfigExtractTest < Test::Unit::TestCase
     assert_equal false, config.config.empty?
   end
 
-  def test_invalid_config_file
-    config = ConfigExtract.new('invalid_file.json')
-    assert_equal true, config.config.empty?
-  end
+  # def test_invalid_config_file
+  #   config = ConfigExtract.new('invalid_file.json')
+  #   assert_equal true, config.config.empty?
+  # end
 
   def test_languages
     config = ConfigExtract.new

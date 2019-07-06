@@ -1,6 +1,6 @@
 require 'json'
 
-class Config
+class ConfigExtract
   CONFIG_FILE=File.expand_path('config.json')
   @config
 

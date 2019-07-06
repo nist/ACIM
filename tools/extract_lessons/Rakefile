@@ -1,5 +1,5 @@
 require "rake/testtask"
-require_relative 'lib/config'
+require_relative 'lib/config_extract'
 require_relative 'lib/lesson'
 
 task :default => [:help]
@@ -11,7 +11,7 @@ end
 
 desc 'Extract lessons for all supported languages'
 task :extract_lessons do
-  config = Config.new
+  config = ConfigExtract.new
 
   config.languages.each do |language|
     puts "Extract lessons for '#{language}'"

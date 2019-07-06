@@ -1,5 +1,6 @@
 require "rake/testtask"
 require_relative 'lib/config'
+require_relative 'lib/lesson'
 
 task :default => [:help]
 
@@ -8,32 +9,18 @@ task :help do
   puts 'This tool extract lessons from ACIM website.'
 end
 
-desc 'Extract lessons for specified language (two letter code)'
-task :extract_lessons, :language_code do |_t, args|
+desc 'Extract lessons for all supported languages'
+task :extract_lessons do
   config = Config.new
-  if !args.language_code
 
-    puts "Specify a language code in #{config.languages}"
-    exit
-  end
-
-  language = args.language_code.to_s
-  if not config.language_valid?(language)
-    puts "Language code #{language} is invalid. Supported languages : #{Language::SUPPORTED_LANGUAGES}"
-    exit
-  end
-
-  puts "Extract lessons for '#{language}'"
-  puts "done."
-end
-
-desc 'Extract lessons for all languages'
-task :extract_all_lessons do
-  config = Config.new
   config.languages.each do |language|
-    puts "Extract lessons for #{language}"
+    puts "Extract lessons for '#{language}'"
+
+    lesson = Lesson.new(config.url(language), language)
+    lesson.get
+    lesson.save
+    puts "'#{language}' extracted."
   end
-  puts "All languages extracted."
 end
 
 desc 'Run all tests'

@@ -11,5 +11,9 @@
         "48": "images/acim48.png",
         "128": "images/acim128.png"
     },
-    "manifest_version": 2
+    "permissions": ["contextMenus"],
+    "background": {
+      "scripts" : ["menu.js"],
+      "persistent": false
+    }
   }

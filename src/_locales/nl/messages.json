@@ -5,5 +5,7 @@
 	"extDescription": {
 		"message": "Een cursus in Wonderen lessen kennisgever."
 
-	}
+	},
+	"goto": {"message":"Go to"},
+	"about": {"message":"About"}
 }

@@ -5,5 +5,7 @@
 	"extDescription": {
 		"message": "Notificatore delle lezioni di Un corso in miracoli."
 
-	}
+	},
+	"goto": {"message":"Go to"},
+	"about": {"message":"About"}
 }

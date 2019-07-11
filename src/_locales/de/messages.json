@@ -5,5 +5,8 @@
 	"extDescription": {
 		"message": "Ein Kurs in Wundern lektionen melder."
 
-	}
+	},
+	"goto": {"message":"Go to"},
+	"about": {"message":"About"}
+
 }

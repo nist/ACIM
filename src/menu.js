@@ -1,3 +1,10 @@
+var showItem = {
+  'id': 'show',
+  'title': chrome.i18n.getMessage('show', []),
+  'contexts': ['page_action']
+}
+chrome.contextMenus.create(showItem)
+
 var gotoItem = {
   'id': 'goto',
   'title': chrome.i18n.getMessage('goto', []),

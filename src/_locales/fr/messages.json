@@ -6,6 +6,7 @@
 		"message": "Notificateur de leçons d'un cours en miracles."
 
 	},
+	"show": {"message":"Afficher"},
 	"goto": {"message":"Aller à"},
 	"about": {"message":"À propos"}
 }

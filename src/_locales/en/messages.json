@@ -6,6 +6,7 @@
 		"message": "A Course in Miracles lessons notifier."
 
 	},
+	"show": {"message":"Show"},
 	"goto": {"message":"Go to"},
 	"about": {"message":"About"}
 }

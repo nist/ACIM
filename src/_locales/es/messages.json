@@ -6,6 +6,7 @@
 		"message": "Un Curso de Milagros lecciones notificador."
 
 	},
+	"show": {"message":"Show"},
 	"goto": {"message":"Go to"},
 	"about": {"message":"About"}
 }

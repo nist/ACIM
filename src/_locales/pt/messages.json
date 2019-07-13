@@ -6,7 +6,7 @@
 		"message": "Um notificador de lições do Curso em Milagres."
 
 	},
-	"show": {"message":"Apresentar"},
+	"show": {"message":"Exibir"},
 	"goto": {"message":"Vamos para"},
 	"about": {"message":"Sobre"}
 }

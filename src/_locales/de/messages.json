@@ -6,7 +6,7 @@
 		"message": "Ein Kurs in Wundern lektionen melder."
 
 	},
-	"show": {"message":"Show"},
+	"show": {"message":"Anzeigen"},
 	"goto": {"message":"Gehe zu"},
 	"about": {"message":"Über"}
 }

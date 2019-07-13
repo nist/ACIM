@@ -6,7 +6,7 @@
 		"message": "Notificatore delle lezioni di Un corso in miracoli."
 
 	},
-	"show": {"message":"presentare"},
+	"show": {"message":"Visualizza"},
 	"goto": {"message":"Vai a"},
-	"about": {"message":"Di"}
+	"about": {"message":"Informazioni"}
 }

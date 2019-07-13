@@ -7,6 +7,6 @@
 
 	},
 	"show": {"message":"Show"},
-	"goto": {"message":"Go to"},
-	"about": {"message":"About"}
+	"goto": {"message":"Gehe zu"},
+	"about": {"message":"Über"}
 }

@@ -6,7 +6,7 @@
 		"message": "Een cursus in Wonderen lessen kennisgever."
 
 	},
-	"show": {"message":"Show"},
-	"goto": {"message":"Go to"},
-	"about": {"message":"About"}
+	"show": {"message":"Laten zien"},
+	"goto": {"message":"Ga naar"},
+	"about": {"message":"Wat betreft"}
 }

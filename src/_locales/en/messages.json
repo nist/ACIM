@@ -9,7 +9,7 @@
 	"show": {"message":"Show"},
 	"goto": {"message":"Go to"},
 	"about": {"message":"About"},
-	"show_url": {"message":"https://lessons.acim.org/chapters/lesson-1.html"},
+	"show_url": {"message":"https://lessons.acim.org/en/chapters/lesson"},
 	"goto_prompt":{"message":"Which lesson number?"},
-	"about_url": {"message":"https://lessons.acim.org/about.html"}
+	"about_url": {"message":"https://lessons.acim.org/en/about.html"}
 }

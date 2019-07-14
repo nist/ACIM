@@ -8,5 +8,8 @@
 	},
 	"show": {"message":"Afficher"},
 	"goto": {"message":"Aller à"},
-	"about": {"message":"À propos"}
+	"about": {"message":"À propos"},
+	"show_url": {"message":"https://lecons.acim.org/chapters/lesson-1.html"},
+	"goto_prompt":{"message":"Quel numéro de leçon ?"},
+	"about_url": {"message":"https://lecons.acim.org/about.html"}
 }

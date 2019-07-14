@@ -11,7 +11,7 @@
         "48": "images/acim48.png",
         "128": "images/acim128.png"
     },
-    "permissions": ["contextMenus"],
+    "permissions": ["alarms", "contextMenus", "debugger", "notifications", "storage"],
     "background": {
       "scripts" : ["menu.js"],
       "persistent": false

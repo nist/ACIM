@@ -8,5 +8,8 @@
 	},
 	"show": {"message":"Exibir"},
 	"goto": {"message":"Vamos para"},
-	"about": {"message":"Sobre"}
+	"about": {"message":"Sobre"},
+	"show_url": {"message":"https://licoes.acim.org/chapters/lesson-1.html"},
+	"goto_prompt":{"message":"Which lesson number?"},
+	"about_url": {"message":"https://licoes.acim.org/about.html"}
 }

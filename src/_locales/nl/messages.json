@@ -9,4 +9,7 @@
 	"show": {"message":"Weergeven"},
 	"goto": {"message":"Ga naar"},
 	"about": {"message":"Over"}
+	"show_url": {"message":"https://lessen.acim.org/chapters/lesson-1.html"},
+	"goto_prompt":{"message":"Which lesson number?"},
+	"about_url": {"message":"https://lessen.acim.org/about.html"}
 }

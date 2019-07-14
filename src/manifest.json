@@ -4,16 +4,18 @@
     "version": "0.1",
     "description": "__MSG_extDescription__",
     "default_locale": "en",
-    "homepage_url": "https://lessons.acim.org/en/",
     "author": "Nicolas St-Laurent <stlaurent.nicolas@gmail.com>",
     "icons": {
         "16": "images/acim16.png",
         "48": "images/acim48.png",
         "128": "images/acim128.png"
     },
+    "browser_action": {
+      "default_icon": "images/acim48.png"
+    },
     "permissions": ["alarms", "contextMenus", "debugger", "notifications", "storage"],
     "background": {
-      "scripts" : ["menu.js"],
+      "scripts" : ["main.js", "menu.js"],
       "persistent": true
     }
   }

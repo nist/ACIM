@@ -1,5 +1,5 @@
 var showItem = {
-  'id': 'show',
+  'id': 'showLesson',
   'title': chrome.i18n.getMessage('show', []),
   'contexts': ['page_action']
 }

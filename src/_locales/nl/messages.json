@@ -8,7 +8,7 @@
 	},
 	"show": {"message":"Weergeven"},
 	"goto": {"message":"Ga naar"},
-	"about": {"message":"Over"}
+	"about": {"message":"Over"},
 	"show_url": {"message":"https://lessen.acim.org/nl/chapters/lesson"},
 	"goto_prompt":{"message":"Welk lesnummer?"},
 	"about_url": {"message":"https://lessen.acim.org/nl/about.html"}

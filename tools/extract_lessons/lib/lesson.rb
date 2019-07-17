@@ -40,7 +40,7 @@ class Lesson
     @lessons.each do |number, title|
       if number && title
         lesson = {number => title}
-        json_file.puts(lesson.to_json)
+        json_file.puts("\"#{number}\": {\"message\":\"#{title}\"},")
       end
     end
     json_file.close

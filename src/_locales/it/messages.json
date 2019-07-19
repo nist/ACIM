@@ -8,7 +8,7 @@
 	},
 	"show": {"message":"Visualizza"},
 	"goto": {"message":"Vai a"},
-	"about": {"message":"Informazioni"},
+	"about": {"message":"Riguardo"},
 	"show_url": {"message":"https://lezioni.acim.org/it/chapters/lesson"},
 	"goto_prompt":{"message":"Quale numero di lezione?"},
 	"about_url": {"message":"https://lezioni.acim.org/it/about.html"},

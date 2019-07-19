@@ -8,6 +8,10 @@ class Lesson {
     this.id = id;
     this.setTitle();
     this.setUrl();
+    this.setDate();
+  }
+
+  setDate() {
     this.date = new Date();
   }
 
@@ -32,6 +36,7 @@ class Lesson {
   refresh() {
     this.setTitle();
     this.setUrl();
+    this.setDate();
     chrome.browserAction.setBadgeText({text:String(this.id)});
   };
 
@@ -46,18 +51,18 @@ class Lesson {
   };
 
   is_new_day() {
-    var next_day = false;
+    var new_day = false;
     var now = new Date();
 
     // If it's another month, we are another day.
-    next_day = (now.getMonth() != this.date.getMonth());
+    new_day = (now.getMonth() != this.date.getMonth());
 
     // Check the day
-    if (!next_day) {
-      next_day = ((now.getDate-this.date.getDate) > 0) ? true : false;
+    if (!new_day) {
+      new_day = ((now.getDate()-this.date.getDate()) > 0) ? true : false;
     }
 
-    return next_day;
+    return new_day;
   }
 };
 

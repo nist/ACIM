@@ -23,14 +23,14 @@ function menuHandler(info) {
   }
 }
 
-
 function gotoAction() {
   var lessonNumber = 0
   do {
     lessonNumber = Number(prompt(chrome.i18n.getMessage('goto_prompt', [])))
   } while (lessonNumber < MIN_LESSON_ID || lessonNumber > MAX_LESSON_ID)
   lesson.id = lessonNumber
-  lesson.refresh()
+  lesson.refresh();
+  lesson.save();
 }
 
 function aboutAction() {

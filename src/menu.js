@@ -10,34 +10,35 @@ var aboutItem = {
   'title': chrome.i18n.getMessage('about', []),
   'contexts': ['browser_action']
 }
+
 var aboutMenuId = chrome.contextMenus.create(aboutItem)
 
-function menuHandler(info) {
+function menuHandler (info) {
   switch(info.menuItemId) {
     case gotoMenuId:
       gotoAction()
-    break
+      break
     case aboutMenuId:
       aboutAction()
-    break
+      break
   }
 }
 
-function gotoAction() {
+function gotoAction () {
   var lessonNumber = 0
   do {
     lessonNumber = Number(prompt(chrome.i18n.getMessage('goto_prompt', [])))
   } while (lessonNumber < MIN_LESSON_ID || lessonNumber > MAX_LESSON_ID)
   lesson.id = lessonNumber
-  lesson.refresh();
-  lesson.save();
+  lesson.refresh()
+  lesson.save()
 }
 
-function aboutAction() {
-    var about_tab = {
-      'url' : chrome.i18n.getMessage('about_url', [])
-    }
-    chrome.tabs.create(about_tab)
+function aboutAction () {
+  var aboutTab = {
+    'url': chrome.i18n.getMessage('about_url', [])
+  }
+  chrome.tabs.create(aboutTab)
 }
 
 chrome.contextMenus.onClicked.addListener(menuHandler)

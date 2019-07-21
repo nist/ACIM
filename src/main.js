@@ -1,87 +1,85 @@
-"use strict";
+'use strict'
 const MIN_LESSON_ID = 1
 const MAX_LESSON_ID = 365
 
 class Lesson {
-
-  constructor(id = MIN_LESSON_ID) {
-    this.id = id;
-    this.setTitle();
-    this.setUrl();
-    this.setDate();
+  constructor (id = MIN_LESSON_ID) {
+    this.id = id
+    this.setTitle()
+    this.setUrl()
+    this.setDate()
   }
 
-  setDate() {
-    this.date = new Date();
+  setDate () {
+    this.date = new Date()
   }
 
-  setTitle() {
+  setTitle () {
     this.title = chrome.i18n.getMessage(String(this.id), [])
   };
 
-  setUrl() {
-    this.url = chrome.i18n.getMessage('show_url', []) + '-'+ this.id +'.html'
-  };
+  setUrl () {
+    this.url = chrome.i18n.getMessage('show_url', []) + '-' + this.id + '.html'
+  }
 
-  next() {
+  next () {
     if (this.id < MAX_LESSON_ID) {
-      this.id++;
+      this.id++
+    } else {
+      this.id = MIN_LESSON_ID
     }
-    else {
-      this.id = MIN_LESSON_ID;
-    }
-    this.refresh();
-  };
+    this.refresh()
+  }
 
-  refresh() {
-    this.setTitle();
-    this.setUrl();
-    this.setDate();
-    chrome.browserAction.setBadgeText({text:String(this.id)});
-  };
+  refresh () {
+    this.setTitle()
+    this.setUrl()
+    this.setDate()
+    chrome.browserAction.setBadgeText({ text: String(this.id) })
+  }
 
-  save() {
-    localStorage["lessonId"] = String(this.id);
-    localStorage["lessonDate"] = this.date;
-  };
+  save () {
+    localStorage['lessonId'] = String(this.id)
+    localStorage['lessonDate'] = this.date
+  }
 
-  load() {
-    this.id = Number(localStorage["lessonId"]) || MIN_LESSON_ID;
-    this.date = localStorage["lessonDate"] ? new Date(localStorage["lessonDate"]) : new Date();
-  };
+  load () {
+    this.id = Number(localStorage['lessonId']) || MIN_LESSON_ID;
+    this.date = localStorage['lessonDate'] ? new Date(localStorage['lessonDate']) : new Date()
+  }
 
-  is_new_day() {
-    var new_day = false;
-    var now = new Date();
+  isNewDay () {
+    var newDay = false
+    var now = new Date()
 
     // If it's another month, we are another day.
-    new_day = (now.getMonth() != this.date.getMonth());
+    newDay = (now.getMonth() !== this.date.getMonth())
 
     // Check the day
-    if (!new_day) {
-      new_day = ((now.getDate()-this.date.getDate()) > 0) ? true : false;
+    if (!newDay) {
+      newDay = ((now.getDate() - this.date.getDate()) > 0)
     }
 
-    return new_day;
+    return newDay
   }
 };
 
 // Restart where we left
-let lesson = new Lesson();
+let lesson = new Lesson()
 
-lesson.load();
+lesson.load()
 
-if (lesson.is_new_day()) {
-  lesson.next();
+if (lesson.isNewDay()) {
+  lesson.next()
 }
 
-lesson.refresh();
+lesson.refresh()
 
-lesson.save();
+lesson.save()
 
-chrome.browserAction.onClicked.addListener(function show() {
-  var show_tab = {
-    'url' : lesson.url
+chrome.browserAction.onClicked.addListener(function show () {
+  var showTab = {
+    'url': lesson.url
   }
-  chrome.tabs.create(show_tab)
-});
+  chrome.tabs.create(showTab)
+})

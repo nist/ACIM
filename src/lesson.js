@@ -1,80 +1,67 @@
-"use strict";
-
+'use strict'
 const MIN_LESSON_ID = 1
 const MAX_LESSON_ID = 365
 
-export class Lesson {
-
-  constructor(id = MIN_LESSON_ID) {
-    this.id = id;
-    setTitle();
-    setUrl();
-    this.date = new Date();
+class Lesson {
+  constructor (id = MIN_LESSON_ID) {
+    this.id = id
+    this.setTitle()
+    this.setUrl()
+    this.setDate()
   }
 
-  get id() {
-    return this._id;
+  setDate () {
+    this.date = new Date()
   }
 
-  set id(newId) {
-    this._id = newId;
-  }
-
-  get title() {
-    return this._title;
-  }
-
-  setTitle() {
-    this.title = chrome.i18n.getMessage(this.id, [])
+  setTitle () {
+    this.title = chrome.i18n.getMessage(String(this.id), [])
   };
 
-  setUrl() {
-    this.url = chrome.i18n.getMessage('show_url', []) + '-'+ this.id +'.html'
-  };
+  setUrl () {
+    this.url = chrome.i18n.getMessage('show_url', []) + '-' + this.id + '.html'
+  }
 
-  next() {
-    if this.id < MAX_LESSON_ID {
-      this.id++;
+  next () {
+    if (this.id < MAX_LESSON_ID) {
+      this.id++
+    } else {
+      this.id = MIN_LESSON_ID
     }
-    else {
-      this.id = MIN_LESSON_ID;
-    }
-    refresh();
-  };
+    this.refresh()
+  }
 
-  refresh() {
-    setTitle();
-    setUrl();
-    chrome.browserAction.setBadgeText({text:String(this.id)});
-    save();
-  };
+  refresh () {
+    this.setTitle()
+    this.setUrl()
+    this.setDate()
+    chrome.browserAction.setBadgeText({ text: String(this.id) })
+  }
 
-  save() {
-    chrome.storage.local.set({'lessonId': this.id});
-    chrome.storage.local.set({'lessonDate': this.date});
-  };
+  save () {
+    localStorage['lessonId'] = String(this.id)
+    localStorage['lessonDate'] = this.date
+  }
 
-  load() {
-    chrome.storage.local.get(['lessonId'], function(result) {
-          this.id = result.lessonId || MIN_LESSON_ID;
-    });
-    chrome.storage.local.get(['lessonDate'], function(result) {
-          this.date = result.lessonDate || new Date();
-    });
-  };
+  load () {
+    this.id = Number(localStorage['lessonId']) || MIN_LESSON_ID;
+    this.date = localStorage['lessonDate'] ? new Date(localStorage['lessonDate']) : new Date()
+  }
 
-  is_it_next_day() {
-    var next_day = false;
-    var now = new Date();
+  isNewDay () {
+    var newDay = false
+    var now = new Date()
 
     // If it's another month, we are another day.
-    next_day = (now.getMonth() != this.date.getMonth());
+    newDay = (now.getMonth() !== this.date.getMonth())
 
     // Check the day
-    if (!next_day) {
-      next_day = ((now.getDate-this.date.getDate) > 0) ? true : false;
+    if (!newDay) {
+      newDay = ((now.getDate() - this.date.getDate()) > 0)
     }
 
-    return next_day;
+    return newDay
   }
 };
+
+export { Lesson }

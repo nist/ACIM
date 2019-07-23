@@ -15,7 +15,7 @@
     },
     "permissions": ["alarms", "contextMenus", "debugger", "notifications", "storage"],
     "background": {
-      "scripts" : ["main.js", "menu.js"],
+      "scripts" : ["lesson.js", "main.js", "menu.js"],
       "persistent": true
     }
   }

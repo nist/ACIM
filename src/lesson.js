@@ -63,5 +63,3 @@ class Lesson {
     return newDay
   }
 };
-
-export { Lesson }

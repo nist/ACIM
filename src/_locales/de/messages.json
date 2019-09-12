@@ -7,9 +7,11 @@
 
 	},
 	"show": {"message":"Anzeigen"},
+	"myLesson": {"message":"Meine Tageslektion"},
 	"goto": {"message":"Gehe zu"},
 	"about": {"message":"Über"},
 	"show_url": {"message":"https://lektionen.acim.org/de/chapters/lesson"},
+	"myLesson_url": {"message":"https://lektionen.acim.org/de/my_lesson"},
 	"goto_prompt":{"message":"Welche Unterrichtsnummer?"},
 	"about_url": {"message":"https://lektionen.acim.org/de/about.html"},
 	"1": {"message":"Nichts, was ich in diesem Raum sehe [auf dieser Straße, von diesem Fenster aus, an diesem Ort], bedeutet etwas."},

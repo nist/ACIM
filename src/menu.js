@@ -1,3 +1,11 @@
+var myLessonItem = {
+  'id': 'myLesson',
+  'title': chrome.i18n.getMessage('myLesson', []),
+  'contexts': ['browser_action']
+}
+
+var myLessonMenuId = chrome.contextMenus.create(myLessonItem)
+
 var gotoItem = {
   'id': 'goto',
   'title': chrome.i18n.getMessage('goto', []),
@@ -15,6 +23,9 @@ var aboutMenuId = chrome.contextMenus.create(aboutItem)
 
 function menuHandler (info) {
   switch(info.menuItemId) {
+    case myLessonMenuId:
+      myLessonAction()
+      break
     case gotoMenuId:
       gotoAction()
       break
@@ -22,6 +33,13 @@ function menuHandler (info) {
       aboutAction()
       break
   }
+}
+
+function myLessonAction () {
+  var myLessonTab = {
+    'url': chrome.i18n.getMessage('myLesson_url', [])
+  }
+  chrome.tabs.create(myLessonTab)
 }
 
 function gotoAction () {

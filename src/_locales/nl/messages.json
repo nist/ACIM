@@ -7,9 +7,11 @@
 
 	},
 	"show": {"message":"Weergeven"},
+	"myLesson": {"message":"Mijn Werkboekles"},
 	"goto": {"message":"Ga naar"},
 	"about": {"message":"Over"},
 	"show_url": {"message":"https://lessen.acim.org/nl/chapters/lesson"},
+	"myLesson_url": {"message":"https://lessen.acim.org/nl/my_lesson"},
 	"goto_prompt":{"message":"Welk lesnummer?"},
 	"about_url": {"message":"https://lessen.acim.org/nl/about.html"},
 	"1": {"message":"Niets wat ik in deze kamer [in deze straat, uit dit raam, op deze plek] zie betekent iets."},

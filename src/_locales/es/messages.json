@@ -7,9 +7,11 @@
 
 	},
 	"show": {"message":"Ver"},
+	"myLesson": {"message":"Mi Lección"},
 	"goto": {"message":"Ir"},
 	"about": {"message":"Acerca"},
 	"show_url": {"message":"https://lecciones.acim.org/es/chapters/lesson"},
+	"myLesson_url": {"message":"https://lecciones.acim.org/es/my_lesson"},
 	"goto_prompt":{"message":"¿Qué número de lección?"},
 	"about_url": {"message":"https://lecciones.acim.org/es/about.html"},
 	"1": {"message":"Nada de lo que veo en esta habitación [en esta calle, desde esta ventana, en este lugar] significa nada."},

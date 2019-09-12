@@ -7,9 +7,11 @@
 
 	},
 	"show": {"message":"Show"},
+	"myLesson": {"message":"My Lesson"},
 	"goto": {"message":"Go to"},
 	"about": {"message":"About"},
 	"show_url": {"message":"https://lessons.acim.org/en/chapters/lesson"},
+	"myLesson_url": {"message":"https://lessons.acim.org/en/my_lesson"},
 	"goto_prompt":{"message":"Which lesson number?"},
 	"about_url": {"message":"https://lessons.acim.org/en/about.html"},
 	"1": {"message":"Nothing I see in this room [on this street, from this window, in this place] means anything."},

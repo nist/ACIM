@@ -7,9 +7,11 @@
 
 	},
 	"show": {"message":"Exibir"},
+	"myLesson": {"message":"Minha Lição"},
 	"goto": {"message":"Vamos para"},
 	"about": {"message":"Sobre"},
 	"show_url": {"message":"https://licoes.acim.org/pt/chapters/lesson"},
+	"myLesson_url": {"message":"https://licoes.acim.org/pt/my_lesson"},
 	"goto_prompt":{"message":"Qual número de lição?"},
 	"about_url": {"message":"https://licoes.acim.org/pt/about.html"},
 	"1": {"message":"Nada do que eu vejo neste quarto [nesta rua, desta janela, neste lugar] significa coisa alguma."},

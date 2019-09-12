@@ -7,9 +7,11 @@
 
 	},
 	"show": {"message":"Afficher"},
+	"myLesson": {"message":"Ma leçon"},
 	"goto": {"message":"Aller à"},
 	"about": {"message":"À propos"},
 	"show_url": {"message":"https://lecons.acim.org/fr/chapters/lesson"},
+	"myLesson_url": {"message":"https://lessons.acim.org/fr/my_lesson"},
 	"goto_prompt":{"message":"Quel numéro de leçon ?"},
 	"about_url": {"message":"https://lecons.acim.org/fr/about.html"},
 	"1": {"message":"Rien de ce que je vois dans cette pièce [dans cette rue, de cette fenêtre, dans ce lieu] ne signifie quoi que ce soit."},

@@ -28,5 +28,9 @@
   "bugs": {
     "url": "https://github.com/nist/ACIM/issues"
   },
-  "homepage": "https://github.com/nist/ACIM#readme"
+  "homepage": "https://github.com/nist/ACIM#readme",
+  "standard": {
+    "env": [ "commonjs", "node" ],
+    "globals": [ "chrome" ]
+  }
 }

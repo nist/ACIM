@@ -19,3 +19,20 @@ chrome.browserAction.onClicked.addListener(function show () {
   }
   chrome.tabs.create(showTab)
 })
+
+chrome.idle.onStateChanged.addListener(function (newState) {
+  // FIXME Refactor
+  switch (newState) {
+    case 'active' :
+      lesson.load()
+
+      if (lesson.isNewDay()) {
+        lesson.next()
+      }
+
+      lesson.refresh()
+
+      lesson.save()
+      break
+  }
+})

@@ -1,17 +1,21 @@
 'use strict'
 
+function initLesson () {
+  lesson.load()
+
+  if (lesson.isNewDay()) {
+    lesson.next()
+  }
+
+  lesson.refresh()
+
+  lesson.save()
+}
+
 // Restart where we left
 let lesson = new Lesson()
 
-lesson.load()
-
-if (lesson.isNewDay()) {
-  lesson.next()
-}
-
-lesson.refresh()
-
-lesson.save()
+initLesson()
 
 chrome.browserAction.onClicked.addListener(function show () {
   var showTab = {
@@ -21,18 +25,9 @@ chrome.browserAction.onClicked.addListener(function show () {
 })
 
 chrome.idle.onStateChanged.addListener(function (newState) {
-  // FIXME Refactor
   switch (newState) {
     case 'active' :
-      lesson.load()
-
-      if (lesson.isNewDay()) {
-        lesson.next()
-      }
-
-      lesson.refresh()
-
-      lesson.save()
+      initLesson()
       break
   }
 })
